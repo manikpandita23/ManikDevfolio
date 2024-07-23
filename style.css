@@ -65,6 +65,30 @@ a:hover {
 .logo:hover {
   cursor: default;
 }
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+.typing-text {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid grey; /* Adjust the color as needed */
+  animation: blink 0.75s step-end infinite;
+}
+
+.typing-text.typing {
+  animation: typing 2s steps(30, end), blink 0.75s step-end infinite;
+}
+
+.typing-text.erasing {
+  animation: typing 2s steps(30, end) reverse, blink 0.75s step-end infinite;
+}
 
 /* HAMBURGER MENU */
 

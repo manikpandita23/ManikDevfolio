@@ -1,4 +1,4 @@
-// Function to toggle menu
+
 function toggleMenu() {
   const menu = document.querySelector(".menu-links");
   const icon = document.querySelector(".hamburger-icon");
@@ -6,7 +6,7 @@ function toggleMenu() {
   icon.classList.toggle("open");
 }
 
-// Function for typing and erasing effect
+
 document.addEventListener("DOMContentLoaded", function() {
   const texts = ["Budding Engineer","AI-ML Enthusiast", "Software Developer", "Mobile Application Developer"];
   let index = 0;
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
   function typeText() {
       typingTextElement.classList.add("typing");
       typingTextElement.textContent = texts[index];
-      setTimeout(eraseText, 4000); // Adjust timing for typing effect
+      setTimeout(eraseText, 4000);
   }
 
   function eraseText() {
@@ -24,8 +24,8 @@ document.addEventListener("DOMContentLoaded", function() {
       setTimeout(() => {
           typingTextElement.classList.remove("erasing");
           index = (index + 1) % texts.length;
-          setTimeout(typeText, 400); // Adjust timing between erasing and next typing
-      }, 2000); // Adjust timing for erasing effect
+          setTimeout(typeText, 400); 
+      }, 2000); 
   }
 
   typeText();

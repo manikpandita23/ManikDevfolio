@@ -90,7 +90,23 @@ a:hover {
 .typing-text.erasing {
   animation: typing 2s steps(30, end) reverse, blink 0.75s step-end infinite;
 }
+/* Typing effect */
+.typing-logo {
+  display: inline;
+  border-right: 2px solid white;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(20) infinite, blink 0.75s step-end infinite;
+}
 
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
 /* HAMBURGER MENU */
 
 #hamburger-nav {

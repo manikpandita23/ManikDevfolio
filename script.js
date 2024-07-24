@@ -1,14 +1,28 @@
-
 function toggleMenu() {
   const menu = document.querySelector(".menu-links");
   const icon = document.querySelector(".hamburger-icon");
   menu.classList.toggle("open");
   icon.classList.toggle("open");
 }
+document.addEventListener('DOMContentLoaded', function() {
+  const logoText = "Manik's DevFolio";
+  const typingLogo = document.getElementById('typing-logo');
+  let logoIndex = 0;
 
+  function typeLogo() {
+      if (logoIndex < logoText.length) {
+          typingLogo.innerHTML += logoText.charAt(logoIndex);
+          logoIndex++;
+          setTimeout(typeLogo, 150);
+      } else {
+          logoIndex = 0;
+          typingLogo.innerHTML = "";
+          setTimeout(typeLogo, 150);
+      }
+  }
 
-document.addEventListener("DOMContentLoaded", function() {
-  const texts = ["Budding Engineer","AI-ML Enthusiast", "Software Developer", "Mobile Application Developer"];
+  typeLogo();
+  const texts = ["Budding Engineer", "AI-ML Enthusiast", "Software Developer", "Mobile Application Developer"];
   let index = 0;
   const typingTextElement = document.querySelector(".typing-text");
 

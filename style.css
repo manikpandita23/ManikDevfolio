@@ -361,12 +361,17 @@ section {
   position: relative;
 }
 
+.section__text__p1,
+.title {
+  text-align: center;
+}
+
 .experience-sub-title {
   color: rgb(85, 85, 85);
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 2rem;
-  align-items: center;
+  text-align: center;
 }
 
 .experience-details-container {
@@ -376,27 +381,49 @@ section {
   align-items: center;
 }
 
+.about-containers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem; 
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 .article-container {
   display: flex;
-  text-align: initial;
   flex-wrap: wrap;
   flex-direction: row;
   gap: 2.5rem;
-  justify-content: space-around;
+  justify-content: center; 
   align-items: center;
+  text-align: left;
 }
 
 article {
   display: flex;
   width: 10rem;
-  justify-content: space-around;
+  justify-content: flex-start; 
   gap: 0.5rem;
+  align-items: center;
 }
 
 article .icon {
   cursor: default;
-  align-items: center;
 }
+
+.arrow {
+  display: block;
+  margin: 2rem auto 0 auto;
+  cursor: pointer;
+}
+
 
 /* PROJECTS SECTION */
 

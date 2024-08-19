@@ -356,8 +356,8 @@ section {
 }
 .resume-frame {
   width: 100%;
-  height: 600px; /* Adjust height as needed */
-  border: none; /* Remove border */
+  height: 600px; 
+  border: none; 
 }
 
 /* EXPERIENCE SECTION */
